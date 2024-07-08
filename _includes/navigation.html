@@ -1,0 +1,9 @@
+<nav role="navigation">
+  <ul>
+    <li><a href="/" {% if page.url == "/" %}class="current"{% endif %}>Home</a></li>
+    <li><a href="/tags" {% if page.url == "/tags" %}class="current"{% endif %}>Tags</a></li>
+    <li><a href="/about" {% if page.url == "/about" %}class="current"{% endif %}>About</a></li>
+    <li><a href="/projects" {% if page.url == "/projects" %}class="current"{% endif %}>Projects</a></li>
+    <li><a href="/atom.xml">Feed</a></li>
+  </ul>
+</nav>

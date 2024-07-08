@@ -1,0 +1,8 @@
+- url: /
+  name: Home
+- url: /tags
+  name: Tags
+- url: /about
+  name: About Us
+- url: /projects
+  name: Projects

@@ -1,0 +1,106 @@
+site: Colorie
+url: 
+baseurl:             ""
+
+author: Colorie
+author:
+  name: Colorie
+  email: 
+  url: 
+  avatar: 
+title: Eatery
+description: Eatery - An opiniated website listed the eatery in Phnom Penh.
+logo: 
+image: 
+permalink: pretty
+
+# twitter: ronaldsvilcins  
+# twitter:
+#   username: ronaldsvilcins
+#   creator: ronaldsvilcins
+#   card: summary
+# social:
+#   name: Ronalds Vilcins
+#   links:
+#     - https://twitter.com/#
+#     - https://www.dribbble.com/#
+#     - https://github.com/#
+#     - https://codepen.io/#
+  
+# disqus:
+#   name: "your disqus username" # required
+#   noscript: "Please enable JavaScript to view the comments powered by Disqus." # optional
+
+
+include:
+  - _redirects
+  
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+  projects:
+    output: true
+    permalink: /projects/:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"     
+      
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
+
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+

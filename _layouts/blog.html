@@ -1,0 +1,23 @@
+---
+layout: default
+title: Notes
+---
+This is an opiniated website of the best place to eat in Phnom Penh. We have tried these places and we like them. That does not mean you will like them also.
+<hr>
+
+<div class="grid">
+  {% for post in site.posts %}
+  <article role="article" class="card">
+    <a href="{{ site.baseurl }}{{ post.url }}">
+	    <div class="meta">
+        <h2> {{ post.title }} </h2>
+        <p>{{ post.summary }}</p>
+        <time class="date" datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%B %-d, %Y" }}
+        </time> 
+	    </div>
+    </a>
+  </article>
+  {% endfor %}
+ </div>
+

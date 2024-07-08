@@ -1,0 +1,10 @@
+tmp
+*.rdb
+.env
+.sass-cache
+coverage
+_drafts
+_site
+.jekyll-cache
+.DS_Store
+.git

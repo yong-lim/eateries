@@ -1,6 +1,6 @@
 site: Colorie
 url: 
-baseurl:             ""
+baseurl: ""
 
 author: Colorie
 author:
@@ -9,7 +9,7 @@ author:
   url: 
   avatar: 
 title: Eatery
-description: Eatery - An opiniated website listed the eatery in Phnom Penh.
+description: "This is an opiniated website of the best place to eat in Phnom Penh. We have tried these places and we like them. That does not mean you will like them also. Drop us a line if you have a place that we should try."
 logo: 
 image: 
 permalink: pretty

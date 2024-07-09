@@ -34,8 +34,6 @@ GEM
       safe_yaml (~> 1.0)
       terminal-table (>= 1.8, < 4.0)
       webrick (~> 1.7)
-    jekyll-disqus-plugin (1.0.1)
-      jekyll (>= 3.7, < 5.0)
     jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-paginate-v2 (3.0.0)
@@ -84,9 +82,8 @@ PLATFORMS
   x86_64-darwin-23
 
 DEPENDENCIES
-  http_parser.rb (~> 0.6.0)
+  http_parser.rb (~> 0.8.0)
   jekyll (~> 4.3.2)
-  jekyll-disqus-plugin (~> 1.0, >= 1.0.1)
   jekyll-feed (~> 0.12)
   jekyll-paginate-v2 (~> 3.0.0)
   jekyll-sitemap (~> 1.4)

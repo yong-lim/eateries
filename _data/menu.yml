@@ -1,6 +1,6 @@
 - url: /
   name: Home
-- url: /tags
-  name: Tastes
-- url: /about
-  name: About Us
+- url: /all
+  name: All
+- url: /contact
+  name: Contact

@@ -14,7 +14,9 @@ title: Notes
         <p>{{ post.summary }}</p>
         <time class="date" datetime="{{ post.date | date_to_xmlschema }}">
           {{ post.date | date: "%B %-d, %Y" }} &middot;
-      		{{post.tags[0]}}{% if post.tags[1] %}, {{post.tags[1]}} {% endif %}
+          {% for t in post.tags %}
+          #{{t}}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
         </time> 
 	    </div>
     </a>

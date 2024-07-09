@@ -4,7 +4,7 @@ layout: default
 
 <article role="article" class="post">
    <h1>All tags</h1>
-   {% assign tags = site.tags | sort %}
+   {% assign tags = site.tags sort_natural %}
    <ul>
      {% for tag in tags %}
      <li>

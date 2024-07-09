@@ -12,7 +12,8 @@ layout: default
           <h2> {{ post.title }} </h2>
           <p>{{ post.summary }}</p>
           <time class="date" datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date: "%Y" }} &middot; {{ project.category }}
+          {{ post.date | date: "%B %-d, %Y" }} &middot; {{ project.category }}
+      		{{post.tags[0]}}{% if post.tags[1] %}, {{post.tags[1]}} {% endif %}
           </time>
        </div>
      </a>

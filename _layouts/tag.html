@@ -4,20 +4,20 @@ layout: default
 
 <div class="grid">
 
-  {% for post in site.posts %}
-  {% if post.tags contains page.tag %}
-  <article role="article" class="card">
-    <a href="{{ site.baseurl }}{{ post.url }}">
-      <div class="meta">
-        <h2> {{ post.title }} </h2>
-        <p>{{ post.summary }}</p>
-        <time class="date" datetime="{{ post.date | date_to_xmlschema }}">
+   {% for post in site.posts %}
+   {% if post.tags contains page.tag %}
+   <article role="article" class="card">
+     <a href="{{ site.baseurl }}{{ post.url }}">
+       <div class="meta">
+          <h2> {{ post.title }} </h2>
+          <p>{{ post.summary }}</p>
+          <time class="date" datetime="{{ post.date | date_to_xmlschema }}">
           {{ post.date | date: "%Y" }} &middot; {{ project.category }}
-        </time>
-      </div>
-    </a>
-  </article>
-  {% endif %}
-  {% endfor %}
+          </time>
+       </div>
+     </a>
+   </article>
+   {% endif %}
+   {% endfor %}
   
 </div>

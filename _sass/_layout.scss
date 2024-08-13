@@ -200,3 +200,24 @@ footer {
     text-align: center;
 }
 
+/* responsive adjustments */
+@media only screen and (min-width:700px) and (max-width:995px)
+{
+  * {
+    font-size: .9em;
+  }
+}
+@media only screen and (min-width:400px) and (max-width:699px)
+{
+  * {
+    font-size: .9em;
+  }
+
+}
+@media only screen and (min-width:100px) and (max-width:399px)
+{
+  * {
+    font-size: .9em;
+  }
+}
+

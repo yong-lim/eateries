@@ -56,6 +56,12 @@ header, main {
 .card:nth-child(4n) {
   background: #fac14e;
 }
+.card:nth-child(5n) {
+  background: #8fb996;
+}
+.card:nth-child(6n) {
+  background: #cbc0d3;
+}
 
 .card {
   //min-height: 100%;

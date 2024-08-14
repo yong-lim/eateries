@@ -1,10 +1,16 @@
-tmp
-*.rdb
-.env
-.sass-cache
-coverage
-_drafts
-_site
+# Bundler cache
+.bundle
+vendor
+
+# Jekyll cache
 .jekyll-cache
+.jekyll-metadata
+.sass-cache
+_site
+
+# Mac OS
 .DS_Store
-.git
+
+# RubyGems
+*.gem
+Gemfile.lock

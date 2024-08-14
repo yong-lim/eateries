@@ -15,25 +15,28 @@ header, main {
   margin: 0 auto;
   max-width: 50rem;
 }
+center {
+  padding-top: .8rem;
+}
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: minmax(10rem,auto);
-    grid-gap: 1rem
+  display: flex;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(8rem, auto);
+  grid-gap: 1rem
 }
 
 .text-center {
   text-align: center;
 }
 .card {
-    /* display: flex; */
-    align-items: left;
-    justify-content: left;
-    min-height: 10rem;
-    position: relative;
-    flex: 1 1 10rem
+  /* display: flex; */
+  min-height: 8rem;
+  align-items: left;
+  justify-content: left;
+  position: relative;
+  flex: 1 1 10rem;
 }
 
 @supports (display:grid) {
@@ -74,6 +77,10 @@ header, main {
   //position: relative;
   //top: 0;
   color: inherit;
+  transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 
 .card .thumb {
@@ -100,8 +107,8 @@ header, main {
 }
 
 .card .meta {
-   padding: 2rem;
-   display: flex;
+  padding: 1.5rem;
+  display: flex;
   
   flex: 1;
   justify-content: space-between;
@@ -112,17 +119,12 @@ header, main {
   background: white;
   margin: 2rem 3rem;
   padding: 2rem 3rem;
+  padding-bottom: 1.7rem;
   -webkit-box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
   box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
   
 }
 
-.card {
-  transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-  &:hover {
-    transform: scale(1.02);
-  }
-}
 ul, ol {
   padding: 0;
   list-style-position: inside;

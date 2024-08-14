@@ -28,20 +28,19 @@ header, main {
   text-align: center;
 }
 .card {
-//    display: flex;
+    /* display: flex; */
     align-items: left;
     justify-content: left;
     min-height: 10rem;
     position: relative;
-    margin-left: 1rem;
-    margin-right: 1rem;
     flex: 1 1 10rem
 }
 
 @supports (display:grid) {
-    .card {
-        margin: 0
-    }
+  .card {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
 }
 
 .card:nth-child(1n) {
@@ -111,6 +110,7 @@ header, main {
 
 .post {
   background: white;
+  margin: 2rem 3rem;
   padding: 2rem 3rem;
   -webkit-box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
   box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);

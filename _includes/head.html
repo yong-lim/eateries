@@ -9,11 +9,6 @@
   <link rel="alternate" title="{{ site.title }}" type="application/json" href="{{ "/feed.json" | prepend: site.baseurl | prepend: site.url }}" />
   <link rel="sitemap" type="application/xml" title="sitemap" href="{{ site.baseurl }}/sitemap.xml" />
     
-  <style type="text/css">
-    {% capture include_to_scssify %}
-      {% include inline.scss %}
-    {% endcapture %}
-    {{ include_to_scssify | scssify }}
-  </style>  
-  
+  <link rel="stylesheet" href="{{ '/assets/css/inline.css' | relative_url }}">
+
 </head>

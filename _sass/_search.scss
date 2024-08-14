@@ -1,6 +1,5 @@
 
 .card-search {
-  cursor: pointer;
   min-height: 2rem;
   position: relative;
   margin-left: 3rem;
@@ -64,14 +63,15 @@
   flex-direction: column;
 }
 
-.card-search h2 {
+.card-search .meta h2 {
   padding-top: 0.2rem;
   font-size: 1.2rem;
   margin: 0;
 }
 
 .search-input {
-  padding: 0.5em;
+  padding: 0.4em;
+  justify-self: center;
   width: 100%;
   font-size: 0.9rem;
   border: 2px solid;

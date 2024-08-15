@@ -27,6 +27,8 @@ center {
   grid-gap: 1rem
 }
 
+.hidden { display: none; }
+
 .text-center {
   text-align: center;
 }
@@ -180,8 +182,11 @@ nav {
 }
 
 footer {
-    margin: 1rem 0;
-    text-align: center;
+  margin: 1rem 0;
+  text-align: center;
+  small a {
+    text-decoration: none;
+  }
 }
 
 /* responsive adjustments */

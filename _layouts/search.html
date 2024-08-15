@@ -10,13 +10,20 @@ layout: page
 
 <!-- Configuration -->
 <script>
+let queryResults = 
+    '<article role="article" class="card-search">
+      <a href="{url}?query={query}" title="{desc}">
+        <div class="meta">
+          <h2>{title}</h2>
+        </div>
+      </a> 
+    </article>';
 window.simpleJekyllSearch = new SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
   json: '{{ site.baseurl }}/search.json',
   <!-- searchResultTemplate: '<ol><a href="{url}?query={query}" title="{desc}">{title}</a></ol>', -->
-  searchResultTemplate:'<article role="article" class="card-search">
-    <a href="{url}?query={query}" title="{desc}"><div class="meta"><h2>{title}</h2></div></a> </article>',
+  searchResultTemplate: queryResults,
   noResultsText: 'No results found',
   limit: 10,
   fuzzy: false,

@@ -1,26 +1,11 @@
-
-<div>
-   {% capture site_tags %}
-      {% for tag in site.tags %}
-        {{ tag | first }}
-        {% unless for loop.last %},
-        {%endunless %}
+<article role="article" class="post">
+   <h2>All tastes</h2>
+   {% assign tags = site.tags | sort %}
+   <ul style="column-count: 3; list-style: none;">
+      {% for tag in tags %}
+      <li>
+         <a href="/tag/{{ tag[0] }}/">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
+      </li>
       {% endfor %}
-   {% endcapture %}
-   {% assign sortedTags = site_tags | split:',' | sort %}
-   {% for tag in sortedTags %}
-   <span><a href="#{{ tag | cgi_escape }}">{{ tag }}</a></span>
-   {% endfor %}
-</div>
-
-{% for tag in sortedTags %}
-<h2 id="{{ tag | cgi_escape }}">{{ tag }}</h2>
-<ul>
-   {% for post in site.tags[tag] %}
-   <li><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="Permanent Link to {{ site.baseurl }}{{ post.url }}">
-       {{post.title }}</a> — <time class="date" datetime="{{ post.date | date: "%Y-%m-%d" }}">
-       {{post.date | date: "%B %-d, %Y" }}</time>
-    </li>
-   {% endfor %}
-</ul>
-{% endfor %}
+   </ul>
+</article>

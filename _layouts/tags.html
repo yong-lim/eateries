@@ -1,15 +1,6 @@
 ---
 layout: default
 ---
-<article role="article" class="post">
-   <h2>All tastes</h2>
-   {% assign tags = site.tags | sort %}
-   <ul style="column-count: 3; list-style: none;">
-      {% for tag in tags %}
-      <li>
-         <a href="/tag/{{ tag[0] }}/">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
-      </li>
-      {% endfor %}
-   </ul>
-</article>
+
+{% include tags.html %}
 

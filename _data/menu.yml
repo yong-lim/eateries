@@ -2,7 +2,9 @@
   name: Home
 - url: /tags
   name: Tastes
-- url: /contact
-  name: Contact
+- url: /categories
+  name: Who's
 - url: /search
   name: Find
+- url: /contact
+  name: Contact

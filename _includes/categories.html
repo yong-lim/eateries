@@ -4,8 +4,12 @@
    {% assign categories = site.categories | sort %}
    <ul style="column-count: 3; list-style: none;">
       {% for category in categories %}
+      {% assign tg = category[0] | replace: " ", "%20" %}
       <li>
-         <a href="/category/{{ category[0] }}/">{{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})</a>
+         <a href="/category/{{ category[0] }}/"
+            {% if page.url contains tg %}class="tag-current"{% endif %}>
+            {{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})
+         </a>
       </li>
       {% endfor %}
    </ul>

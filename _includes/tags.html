@@ -3,8 +3,12 @@
    {% assign tags = site.tags | sort %}
    <ul style="column-count: 3; list-style: none;">
       {% for tag in tags %}
+      {% assign tg = tag[0] | replace: " ", "%20" %}
       <li>
-         <a href="/tag/{{ tag[0] }}/">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
+         <a href="/tag/{{ tag[0] }}/"
+            {% if page.url contains tg %}class="tag-current"{% endif %}>
+            {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+         </a>
       </li>
       {% endfor %}
    </ul>

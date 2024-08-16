@@ -177,6 +177,12 @@ nav {
     }
 }
 
+.tag-current {
+  background-color: #ef7d4d !important;
+  color: white !important; 
+  /* color: #ef7d4d !important; */ 
+}
+
 .current {
   text-decoration: underline;
 //  text-decoration: underline wavy #495057 0.10rem;

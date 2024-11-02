@@ -5,8 +5,8 @@ sitemap: false
 
 @charset "utf-8";
 
-@import "fonts";
-@import "type";
-@import "layout";
-@import "search";
-@import "click-to-top";
+@use "fonts";
+@use "type";
+@use "layout";
+@use "search";
+@use "click-to-top";

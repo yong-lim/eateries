@@ -36,7 +36,7 @@
   background: white;
   -webkit-box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
   /* box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03); */
-  box-shadow: 0 0.8rem 1.2rem #415a77;
+  box-shadow: 0 0.2rem 0.5rem #415a77;
   //display: flex;
   //flex-direction: column;
   text-decoration: none;
@@ -52,7 +52,7 @@
 .card-search {
   transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
   }
 }
 

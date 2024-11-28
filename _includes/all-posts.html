@@ -1,0 +1,19 @@
+<div class="grid">
+  {% for post in site.posts %}
+  <article role="article" class="card">
+    <a href="{{ site.baseurl }}{{ post.url }}">
+	    <div class="meta">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.summary }}</p>
+        <time class="date" datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%B %-d, %Y" }} &middot;
+          {% for t in post.tags %}
+          #{{t}}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </time> 
+	    </div>
+    </a>
+  </article>
+  {% endfor %}
+</div>
+

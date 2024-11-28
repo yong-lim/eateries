@@ -4,7 +4,7 @@ function formFocus() {
 
 function formReset() {
   $('#alert-field').show()
-    .html("<span><p>Thank you for dropping us a line . . .</p></span><br>");
+    .html("<span><p>Thank you for telling us . . .</p></span><br>");
   document.getElementById("formID").reset();
   setTimeout(() => {
     $('#sendButton').show();
@@ -26,10 +26,13 @@ function postEatery(e) {
   // console.log("inpostEatery");
   pleaseWaite();
 
+  const formId = "1FAIpQLSf6Paftyz8sBWHuG9TfaWcspP8LN0Mw-0ubF6KyGu3b9NpGGQ"
+  const uri = `https://docs.google.com/forms/d/e/${formId}/formResponse`     
+
   //AJAX request
   $.ajax({
     //The public Google Form url, but replace /view with /formResponse
-    url: 'https://docs.google.com/forms/d/e/1FAIpQLSf6Paftyz8sBWHuG9TfaWcspP8LN0Mw-0ubF6KyGu3b9NpGGQ/formResponse',     
+    url: uri,
     data: $('#formID').serialize(), //Nifty jquery function that gets all the input data 
     type: 'POST', //tells ajax to post the data to the url
     dataType: "json", //the standard data type for most ajax requests

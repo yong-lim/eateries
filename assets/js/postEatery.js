@@ -26,17 +26,18 @@ function postEatery(e) {
   // console.log("inpostEatery");
   pleaseWaite();
 
-  const formId = "1FAIpQLSf6Paftyz8sBWHuG9TfaWcspP8LN0Mw-0ubF6KyGu3b9NpGGQ"
-  const uri = `https://docs.google.com/forms/d/e/${formId}/formResponse`     
-
+  // form is in yong@yonglim.com
+  const formID  = "1FAIpQLSf6Paftyz8sBWHuG9TfaWcspP8LN0Mw-0ubF6KyGu3b9NpGGQ";
+  const formURL = `https://docs.google.com/forms/d/e/${formID}/formResponse`;     
   //AJAX request
   $.ajax({
     //The public Google Form url, but replace /view with /formResponse
-    url: uri,
+    url: formURL,
     data: $('#formID').serialize(), //Nifty jquery function that gets all the input data 
     type: 'POST', //tells ajax to post the data to the url
     dataType: "json", //the standard data type for most ajax requests
-    mode: 'cors',
+    mode: 'no-cors',
+    header: { 'Content-Type': 'application/json' },
     statusCode: { //the status code from the POST request
       0: function(data) { //0 is when Google gives a CORS error, don't worry it went through
         //success

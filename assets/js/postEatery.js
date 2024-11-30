@@ -3,6 +3,7 @@ function formFocus() {
 }
 
 function formReset() {
+  // console.log("in formReset");
   $('#alert-field').show()
     .html("<span><p>Thank you for telling us . . .</p></span><br>");
   document.getElementById("formID").reset();
@@ -10,7 +11,14 @@ function formReset() {
     $('#sendButton').show();
     $('#alert-field').hide();
     console.log('This alert appeared after 3 second!'); 
-  }, 2000);
+  }, 3000);
+}
+
+function hasError() {
+  $('#sendButton').show();
+  $('#alert-field').show()
+    .html("<span><p><b>Oh no! Something went wrong. Please let us know of your problem.</b></p></span>");
+  alert('Oh no! something went wrong. Please let us know of your problem.');
 }
 
 function pleaseWaite() {
@@ -21,9 +29,9 @@ function pleaseWaite() {
 
 //selector from your HTML form
 function postEatery(e) {
-  //prevent the form from submiting so we can post to the google form
+  // console.log("in postEatery");
+  // prevent the form from submiting so we can post to the google form
   e.preventDefault();
-  // console.log("inpostEatery");
   pleaseWaite();
 
   // form is in yong@yonglim.com
@@ -35,9 +43,9 @@ function postEatery(e) {
     url: formURL,
     data: $('#formID').serialize(), //Nifty jquery function that gets all the input data 
     type: 'POST', //tells ajax to post the data to the url
-    dataType: "json", //the standard data type for most ajax requests
-    mode: 'no-cors',
-    header: { 'Content-Type': 'application/json' },
+    dataType: "xml", //the standard data type for most ajax requests
+    // mode: 'no-cors',
+    // header: { 'Content-Type': 'application/json' },
     statusCode: { //the status code from the POST request
       0: function(data) { //0 is when Google gives a CORS error, don't worry it went through
         //success
@@ -50,9 +58,7 @@ function postEatery(e) {
        },
        403: function(data) {//403 is when something went wrong and the submission didn't go through
         //error
-        $('#alert-field').show()
-          .html("<span><p><b>Oh no! something went wrong. Please let us know of your problem.</b></p></span>");
-        alert('Oh no! something went wrong. Please let us know of your problem.');
+        hasError();
       }
     }  
   });

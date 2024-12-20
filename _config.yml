@@ -93,6 +93,8 @@ defaults:
 # their entries' file path in the `include:` list.
 #
 exclude:
+  - README.md
+  - LICENSE.md
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
@@ -103,4 +105,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - docker-compose.yml
 
+# Default Markdown Engine
+markdown: kramdown

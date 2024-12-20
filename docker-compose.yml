@@ -1,0 +1,12 @@
+# no version needed since 2020
+services:
+  jekyll:
+    image: bretfisher/jekyll-serve
+    container_name: eateries
+    working_dir: /srv
+    volumes: 
+      - .:/srv
+    ports:
+      - '5743:5743'
+      - '35743:35743'
+    command: bundle exec jekyll s --trace --force_polling -H 0.0.0.0 -P 5743 -l --livereload-port 35743

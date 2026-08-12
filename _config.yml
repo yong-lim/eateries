@@ -5,16 +5,16 @@ baseurl: ""
 author: Colorie
 author:
   name: Colorie
-  email: 
-  url: 
-  avatar: 
+  email:
+  url:
+  avatar:
 title: Eatery
 description: "This is an opiniated website of the best place to eat in Phnom Penh. We have tried these places and we like them. That does not mean you will like them also. Drop us a line if you have a place that we should try."
-logo: 
-image: 
+logo:
+image:
 permalink: pretty
 
-# twitter: ronaldsvilcins  
+# twitter: ronaldsvilcins
 # twitter:
 #   username: ronaldsvilcins
 #   creator: ronaldsvilcins
@@ -26,7 +26,7 @@ permalink: pretty
 #     - https://www.dribbble.com/#
 #     - https://github.com/#
 #     - https://codepen.io/#
-  
+
 # disqus:
 #   name: "your disqus username" # required
 #   noscript: "Please enable JavaScript to view the comments powered by Disqus." # optional
@@ -34,7 +34,7 @@ permalink: pretty
 
 include:
   - _redirects
-  
+
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
@@ -58,7 +58,7 @@ collections:
   projects:
     output: true
     permalink: /projects/:slug
-  
+
 defaults:
   -
     scope:
@@ -82,8 +82,8 @@ defaults:
       path: ""
       type: "projects"
     values:
-      layout: "project"     
-      
+      layout: "project"
+
   - scope:
       path: "assets/images"
     values:
@@ -106,6 +106,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - docker-compose.yml
+  - .jj/
 
 # Default Markdown Engine
 markdown: kramdown

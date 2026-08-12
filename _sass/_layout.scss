@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
-  margin:0; 
-  padding:0; 
+  margin:0;
+  padding:0;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -101,7 +101,7 @@ iframe {
   text-decoration: none;
 }
 
-.card p { 
+.card p {
   font-size: 0.9rem;
 }
 
@@ -117,7 +117,7 @@ iframe {
 .card .meta {
   padding: 1.5rem;
   display: flex;
-  
+
   flex: 1;
   justify-content: space-between;
   flex-direction: column;
@@ -188,8 +188,8 @@ nav {
 
 .tag-current {
   background-color: #ef7d4d !important;
-  color: blue !important; 
-  /* color: #ef7d4d !important; */ 
+  color: blue !important;
+  /* color: #ef7d4d !important; */
 }
 
 .current {
@@ -236,4 +236,3 @@ footer {
     height: 150px;
   }
 }
-

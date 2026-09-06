@@ -83,7 +83,6 @@ defaults:
       type: "projects"
     values:
       layout: "project"
-
   - scope:
       path: "assets/images"
     values:

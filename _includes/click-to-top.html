@@ -1,8 +1,8 @@
 <!-- Get the arrow-up icon -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 
 <div id="click-to-top" class="click-to-top">
-  <i class="fa fa-arrow-up"></i>
+  <span>&#8682;</span>
 </div>
 
 <script>
@@ -17,7 +17,7 @@
     });
     clickToTop.addEventListener('click', () => {
       window.scrollTo({
-        top: 0, 
+        top: 0,
         behavior: 'smooth'
       });
     });

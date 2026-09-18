@@ -8,7 +8,8 @@ layout: compress
   {% include head.html %}
 
   <body>
-     {% include masthead.html %}
+    {% include progress-bar.html %}
+    {% include masthead.html %}
       <main id="main" role="main">
         {% if page.title contains "Category" %}
         {% assign my_title = page.title | split: ": " %}
@@ -21,6 +22,6 @@ layout: compress
       </main>
 
     {% include footer.html %}
-    {% include click-to-top.html %}
+    {% include back-to-top.html %}
   </body>
 </html>

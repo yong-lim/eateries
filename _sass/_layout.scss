@@ -1,5 +1,7 @@
 /* Default light theme */
-:root {
+:root, html {
+  color-scheme: light dark;
+
   --font-sans: "Inter", 'Helvetica', sans-serif;
   --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   --font-headings: "Lora", serif;
@@ -8,38 +10,39 @@
   --radius-lg: 0.75rem;
   --headings-weight: 600;
 
-
-  --bg: #fff6e3;
-  --bg-secondary: #f1f2f4;
-  // --headings: #1e293b;
-  --headings: #1e2a5c;
+  --bg:             light-dark(#fff6e3, #fff6e3);
+  --bg-secondary:   light-dark(#f1f2f4, #1c1d26);
+  // --headings:      light-dark(#1e293b, #1e2a5c);
+  --headings:       light-dark(#1e2a5c, #1e2a5c);
   // --text: #374151;
-  --text: #46433A;
-  --text-secondary: #6b7280;
-  --links: #4f46e5;
-  --highlight: #FFECB2; // light yellow
-  --code-text: #9D174D;
-  --share-text: #999;
-  --color-menu: #C70039;
-  --border: rgba(15, 23, 42, 0.08);
-  --border-subtle: rgba(15, 23, 42, 0.05);
+  --text:           light-dark(#46433A, #46433A);
+  --text-secondary: light-dark(#6b7280, #9CA3AF);
+  --links:          light-dark(#4f46e5, #91A7FF);
+  --highlight:      light-dark(#FFECB2, #41C7C7); // light yellow
+  --code-text:      light-dark(#9D174D, #91A7FF);
+  --share-text:     light-dark(#999999, #C4C4C4);
+  --color-menu:     light-dark(#C70039, #f8c348);
+  --border:         light-dark(rgba(15, 23, 42, 0.08), rgba(255, 255, 255, 0.08));
+  --border-subtle:  light-dark(rgba(15, 23, 42, 0.05), rgba(255, 255, 255, 0.05));
 }
 
 /* Dark theme switch */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #fff6e3;
-    --bg-secondary: #1c1d26;
-    --headings: #1e2a5c;
-    --links: #91A7FF;
-    --highlight: #41C7C7;
-    --text: #46433A;
-    --text-secondary: #9CA3AF;
-    --code-text: #91A7FF;
-    --share-text: #C4C4C4;
-    --color-menu: #f8c348;
-    --border: rgba(255, 255, 255, 0.08);
-    --border-subtle: rgba(255, 255, 255, 0.05);
+    color-scheme: dark;
+
+    // --bg: #fff6e3;
+    // --bg-secondary: #1c1d26;
+    // --headings: #1e2a5c;
+    // --links: #91A7FF;
+    // --highlight: #41C7C7;
+    // --text: #46433A;
+    // --text-secondary: #9CA3AF;
+    // --code-text: #91A7FF;
+    // --share-text: #C4C4C4;
+    // --color-menu: #f8c348;
+    // --border: rgba(255, 255, 255, 0.08);
+    // --border-subtle: rgba(255, 255, 255, 0.05);
   }
 }
 

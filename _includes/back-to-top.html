@@ -1,0 +1,64 @@
+<button class="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <span>&#8682;</span>
+  <!--<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>-->
+</button>
+<style>
+  .back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 1.2em;
+    width: 35px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
+    color: var(--headings);
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    opacity: 0;
+    background: #aeb6bf;
+    pointer-events: none;
+    /*transition: opacity 0.3s ease;*/
+    transition: 0.3s;
+    transform: translateY(10px);
+    box-shadow: 0 0.25rem .7rem rgba(65, 90, 119, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+  }
+  .back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .back-to-top:hover {
+    /*color: var(--links);*/
+    background: #FFC300;
+    color: blue;
+    transform: translate3d(0, -4px, 0);
+    -webkit-transform: translate3d(0, -2px, 0);
+  }
+  @media screen and (max-width: 600px) {
+    .back-to-top {
+      bottom: 1em;
+      right: 1em;
+      width: 36px;
+      height: 36px;
+    }
+  }
+</style>
+<script>
+(function() {
+  var btn = document.querySelector('.back-to-top');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  });
+})();
+</script>
